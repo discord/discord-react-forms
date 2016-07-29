@@ -1,0 +1,31 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{js,py,html}]
+charset = utf-8
+
+[*.html]
+indent_size = 2
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{js,ts,html,styl,css}]
+indent_style = space
+indent_size = 2
+
+[*.{ex,exs}]
+indent_style = space
+indent_size = 2
+
+[*.{m,mm,h}]
+indent_style = space
+indent_size = 2
+
+[*.conf]
+indent_style = space
+indent_size = 2

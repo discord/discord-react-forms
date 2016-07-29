@@ -1,0 +1,65 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "__IOS__": true,
+    "__MOBILE__": true,
+    "__OVERLAY__": true,
+    "__ANDROID__": true,
+    "__WEB__": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": [
+    "react",
+    "flowtype",
+    "flow-vars"
+  ],
+  "rules": {
+    "curly": ["error", "multi-line"],
+    "operator-linebreak": ["error", "after"],
+    "camelcase": ["error", {"properties": "always"}],
+    "max-len": ["error", {"code": 120, "ignoreComments": true}],
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "no-multi-spaces": "error",
+    "no-multi-str": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-trailing-spaces": "error",
+    "space-unary-ops": ["error", { "nonwords": false, "overrides": {}}],
+    "one-var": ["error", "never"],
+    "key-spacing": ["error", {"beforeColon": false, "afterColon": true }],
+    "padded-blocks": ["error", "never"],
+    "brace-style": ["error", "stroustrup", {"allowSingleLine": true}],
+    "keyword-spacing": "error",
+    "space-before-blocks": ["error", "always"],
+    "eol-last": "error",
+    "space-before-function-paren": ["error", "never"],
+    "array-bracket-spacing": ["error", "never"],
+    "space-in-parens": ["error", "never"],
+    "no-multiple-empty-lines": "error",
+    "no-with": "error",
+    "comma-dangle": ["error", "only-multiline"],
+    "yoda": ["error", "never"],
+    "new-cap": ["error", {"newIsCap": true, "capIsNew": false}],
+    "semi": ["error", "always"],
+    "prefer-arrow-callback": "error",
+    "prefer-spread": "error",
+    "no-undef": "error",
+    "no-extra-semi": "error",
+    "no-dupe-keys": "error",
+    "flowtype/space-before-type-colon": ["error", "never"],
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1,
+    "prefer-const": ["error", {"destructuring": "all"}]
+  }
+}
