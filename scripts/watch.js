@@ -1,11 +1,12 @@
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const webpackOptions = require('../webpack.config');
+const webpackConfig = require('./helpers/webpack.config');
+const {PORT} = require('./helpers/Constants');
 
 function watch() {
-  return new WebpackDevServer(webpack(webpackOptions), {
+  return new WebpackDevServer(webpack(webpackConfig.getWatchConfig()), {
     contentBase: './example',
-    hot: true,
+    inline: true,
     quiet: false,
     noInfo: false,
     watchOptions: {
@@ -13,10 +14,9 @@ function watch() {
       poll: 1000
     },
     stats: {
-      colors: true,
-      chunkModules: false
+      colors: true
     }
-  }).listen(8080, err => {
+  }).listen(PORT, err => {
     console.log('Running webpack server');
   });
 }

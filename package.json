@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "npm run clean && babel lib --out-dir dist",
-    "prepublish": "npm run build",
-    "watch": "node scripts/watch.js"
+    "build": "node scripts/build.js",
+    "watch": "node scripts/watch.js",
+    "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC",
