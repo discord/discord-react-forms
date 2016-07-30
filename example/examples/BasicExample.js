@@ -2,7 +2,7 @@ import React from 'react';
 import {Form, TextInput, SubmitButton} from '../../lib';
 
 const BasicExample = () => (
-  <Form>
+  <Form submit={submit}>
     <div className="row">
       <TextInput placeholder="Hello, World!" name="hello" />
       <TextInput placeholder="default value" value="This is a default value" name="hello2" />
@@ -12,5 +12,10 @@ const BasicExample = () => (
     </div>
   </Form>
 );
+
+function submit(values, callback) {
+  console.log('submitted: ', values);
+  setTimeout(callback, 1000);
+}
 
 export default BasicExample;

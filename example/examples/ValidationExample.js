@@ -2,8 +2,8 @@ import React from 'react';
 import {Form, TextInput, SubmitButton} from '../../lib';
 
 const ValidationExample = () => (
-  <Form>
-    <TextInput name="text" validator={validator} required />
+  <Form submit={submit}>
+    <TextInput name="text" validator={validator} required label="Must be valid" />
     <SubmitButton canSubmitText="Submit" cannotSubmitText="Cannot Submit" isSubmittingText="Submitting" />
   </Form>
 );
@@ -16,6 +16,17 @@ function validator({field}) {
   else if (value == 'bad') {
     return 'That value is no good';
   }
+}
+
+function submit(values, callback) {
+  setTimeout(() => {
+    if (values.text != 'good') {
+      callback({text: 'Oh no! Something bad happened on the server'});
+    }
+    else {
+      callback();
+    }
+  }, 1000);
 }
 
 export default ValidationExample;
