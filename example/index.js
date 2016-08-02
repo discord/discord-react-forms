@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import BasicExample from './examples/BasicExample';
 import ValidationExample from './examples/ValidationExample';
+import ListeningExample from './examples/ListeningExample';
 
 import './style.styl';
 
@@ -16,6 +17,7 @@ const App = (
   <div className="container">
     <Example title="Basic Example"><BasicExample /></Example>
     <Example title="Validation Example"><ValidationExample /></Example>
+    <Example title="Listening Example"><ListeningExample /></Example>
   </div>
 );
 
