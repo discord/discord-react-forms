@@ -22,6 +22,17 @@ describe('Form tests', () => {
       const expected = {value, hasBeenTouched: false, error: null};
       expect(form.state.fields[name]).toEqual(expected);
     });
+
+    it('should call on field update after a field is initialized', () => {
+      const onFieldUpdate = jest.fn();
+      const form = TestUtils.renderIntoDocument(<Form submit={noop} onFieldUpdate={onFieldUpdate} />);
+      const name = chance.string();
+      const value = chance.string();
+
+      form.initField({name, value});
+
+      expect(onFieldUpdate).toBeCalledWith(name, {value: value, hasBeenTouched: false, error: null});
+    });
   });
 
   describe('Set field tests', () => {
@@ -49,12 +60,24 @@ describe('Form tests', () => {
       validator.mockReturnValueOnce(error);
 
       form.setState({fields: {[name]: {value, validator}}});
-
       form.setField({name, value: value2});
 
       const expected = {value: value2, hasBeenTouched: true, error, validator};
       expect(form.state.fields[name]).toEqual(expected);
       expect(validator.mock.calls.length).toBe(1);
+    });
+
+    it('should call on field update after a field is set', () => {
+      const onFieldUpdate = jest.fn();
+      const form = TestUtils.renderIntoDocument(<Form submit={noop} onFieldUpdate={onFieldUpdate} />);
+      const name = chance.string();
+      const value = chance.string();
+      const value2 = chance.string();
+
+      form.setState({fields: {[name]: {value}}});
+      form.setField({name, value: value2});
+
+      expect(onFieldUpdate).toBeCalledWith(name, {value: value2, hasBeenTouched: true, error: null});
     });
   });
 
@@ -110,6 +133,16 @@ describe('Form tests', () => {
       form.setHasBeenTouched(name);
 
       expect(form.state.canSubmit).toBe(true);
+    });
+
+    it('should call on field update after a field has been touched', () => {
+      const onFieldUpdate = jest.fn();
+      const form = TestUtils.renderIntoDocument(<Form submit={noop} onFieldUpdate={onFieldUpdate} />);
+
+      form.setState({fields: {[name]: {}}});
+      form.setHasBeenTouched(name);
+
+      expect(onFieldUpdate).toBeCalledWith(name, {hasBeenTouched: true, error: null});
     });
   });
 
