@@ -10,21 +10,21 @@ const noop = () => {};
 describe('Form tests', () => {
   const chance = new Chance();
 
-  describe('Init value tests', () => {
+  describe('Init field tests', () => {
 
     it('should have the correct values', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
       const value = chance.string();
 
-      form.initValue({name, value});
+      form.initField({name, value});
 
       const expected = {value, hasBeenTouched: false, error: null};
       expect(form.state.fields[name]).toEqual(expected);
     });
   });
 
-  describe('Set value tests', () => {
+  describe('Set field tests', () => {
     it('should set the value and not contain an error for a field without a validator', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
@@ -33,27 +33,26 @@ describe('Form tests', () => {
 
       form.setState({fields: {[name]: {value}}});
 
-      form.setValue({name, value: value2});
+      form.setField({name, value: value2});
 
       const expected = {value: value2, hasBeenTouched: true, error: null};
       expect(form.state.fields[name]).toEqual(expected);
     });
 
-    it('should set the value and contain an error when the validator returns a string', () => {
+    it('should set the field and contain an error when the validator returns a string', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
       const value = chance.string();
       const value2 = chance.string();
       const error = chance.string();
-      const required = true;
       const validator = jest.fn();
       validator.mockReturnValueOnce(error);
 
-      form.setState({fields: {[name]: {value, validator, required}}});
+      form.setState({fields: {[name]: {value, validator}}});
 
-      form.setValue({name, value: value2});
+      form.setField({name, value: value2});
 
-      const expected = {value: value2, hasBeenTouched: true, error, validator, required};
+      const expected = {value: value2, hasBeenTouched: true, error, validator};
       expect(form.state.fields[name]).toEqual(expected);
       expect(validator.mock.calls.length).toBe(1);
     });
@@ -106,9 +105,8 @@ describe('Form tests', () => {
     it('shoud set can submit to true if we are able to submit after a field has been touched', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
-      const required = true;
 
-      form.setState({fields: {[name]: {required}}});
+      form.setState({fields: {[name]: {}}});
       form.setHasBeenTouched(name);
 
       expect(form.state.canSubmit).toBe(true);
@@ -122,7 +120,7 @@ describe('Form tests', () => {
       expect(form.canSubmit()).toBe(true);
     });
 
-    it('should be submittable when there are no required fields', () => {
+    it('should be submittable when there are no fields with validators', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
       const value = chance.string();
@@ -136,11 +134,9 @@ describe('Form tests', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
       const value = chance.string();
-      const required = true;
-      const error = chance.string();
       const validator = jest.fn();
 
-      form.setState({fields: {[name]: {name, value, validator, required}}});
+      form.setState({fields: {[name]: {name, value, validator}}});
 
       expect(validator).not.toBeCalled();
       expect(form.canSubmit()).toBe(false);
@@ -150,14 +146,13 @@ describe('Form tests', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
       const value = chance.string();
-      const required = true;
       const validator = jest.fn();
       const noError = null;
 
       validator.mockReturnValueOnce(noError);
 
-      form.setState({fields: {[name]: {name, value, validator, required}}});
-      form.setValue({name, value});
+      form.setState({fields: {[name]: {name, value, validator}}});
+      form.setField({name, value});
 
       expect(form.canSubmit()).toBe(true);
       expect(validator).toBeCalled();
@@ -167,14 +162,13 @@ describe('Form tests', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
       const value = chance.string();
-      const required = true;
       const validator = jest.fn();
       const error = chance.string();
 
       validator.mockReturnValueOnce(error);
 
-      form.setState({fields: {[name]: {value, validator, required}}});
-      form.setValue({name, value});
+      form.setState({fields: {[name]: {value, validator}}});
+      form.setField({name, value});
 
       expect(form.canSubmit()).toBe(false);
       expect(validator).toBeCalled();
