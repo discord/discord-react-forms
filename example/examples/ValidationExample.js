@@ -8,8 +8,7 @@ const ValidationExample = () => (
   </Form>
 );
 
-function validator({field}) {
-  const {value} = field;
+function validator(name, {value}) {
   if (!value.length) {
     return 'Yo, fill this out';
   }

@@ -13,13 +13,10 @@ const ListeningExample = React.createClass({
     this.setState({name: name, value: field.value});
   },
 
-  submit() {
-  },
-
   render() {
     const {name, value} = this.state;
     return (
-        <Form onFieldUpdate={this.onUpdate} submit={this.submit}>
+        <Form onFieldUpdate={this.onUpdate} submit={() => {}}>
           <div>Last edited {name} with value '{value}'</div>
           <TextInput name="field-1" />
           <TextInput name="field-2" />
