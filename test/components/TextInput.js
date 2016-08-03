@@ -1,6 +1,6 @@
 jest.unmock('../../lib/components/TextInput');
 jest.unmock('../../lib/components/common/FieldMixin');
-jest.unmock('../../lib/components/common/Wrapper');
+jest.unmock('../../lib/components/common/FieldWrapper');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -9,7 +9,6 @@ import Chance from 'chance';
 import {mount} from 'enzyme';
 import {getStubbedContext} from '../helpers';
 import TextInput from '../../lib/components/TextInput';
-import Wrapper from '../../lib/components/common/Wrapper';
 
 describe('TextInput tests', () => {
   const chance = new Chance();

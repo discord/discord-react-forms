@@ -1,20 +1,20 @@
-jest.unmock('../../../lib/components/common/Wrapper');
+jest.unmock('../../../lib/components/common/FieldWrapper');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import Chance from 'chance';
 import {mount} from 'enzyme';
-import Wrapper from '../../../lib/components/common/Wrapper';
+import FieldWrapper from '../../../lib/components/common/FieldWrapper';
 
-describe('Wrapper tests', () => {
+describe('FieldWrapper tests', () => {
   const chance = new Chance();
 
   describe('Label tests', () => {
     it('should include a label when given the prop', () => {
       const label = chance.string();
 
-      const wrapper = mount(<Wrapper label={label} />);
+      const wrapper = mount(<FieldWrapper label={label} />);
 
       const foundLabel = wrapper.find('.form-label');
       expect(foundLabel.length).toBe(1);
@@ -22,7 +22,7 @@ describe('Wrapper tests', () => {
     });
 
     it('should not contain a label when not given the prop', () => {
-      const wrapper = mount(<Wrapper />);
+      const wrapper = mount(<FieldWrapper />);
 
       const foundLabel = wrapper.find('.form-label');
       expect(foundLabel.length).toBe(0);
@@ -31,7 +31,7 @@ describe('Wrapper tests', () => {
 
   describe('Required tests', () => {
     it('should include the required star when required', () => {
-      const wrapper = mount(<Wrapper required />);
+      const wrapper = mount(<FieldWrapper required />);
 
       const foundRequired = wrapper.find('.form-required-star');
       expect(foundRequired.length).toBe(1);
@@ -39,7 +39,7 @@ describe('Wrapper tests', () => {
     });
 
     it('should not include the required star if not required', () => {
-      const wrapper = mount(<Wrapper />);
+      const wrapper = mount(<FieldWrapper />);
 
       const foundRequired = wrapper.find('.form-required-star');
       expect(foundRequired.length).toBe(0);
@@ -50,7 +50,7 @@ describe('Wrapper tests', () => {
     it('should include an error when given the prop', () => {
       const error = chance.string();
 
-      const wrapper = mount(<Wrapper error={error} />);
+      const wrapper = mount(<FieldWrapper error={error} />);
 
       const foundError = wrapper.find('.form-error');
       expect(foundError.length).toBe(1);
@@ -58,7 +58,7 @@ describe('Wrapper tests', () => {
     });
 
     it('should not include an error when not given the prop', () => {
-      const wrapper = mount(<Wrapper />);
+      const wrapper = mount(<FieldWrapper />);
 
       const foundError = wrapper.find('.form-error');
       expect(foundError.length).toBe(0);
