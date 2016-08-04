@@ -4,3 +4,5 @@ dist
 npm-debug.log
 /index.js
 .documentation-output
+gitbook
+index.html

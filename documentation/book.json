@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "github",
+    "edit-link"
+  ],
+
+  "links": {
+    "home": "discord",
+    "sharing": {
+      "twitter": "https://twitter.com/discordapp"
+    }
+  },
+
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/hammerandchisel/react-forms/tree/master",
+      "label": "Suggest changes"
+    },
+
+    "github": {
+      "url": "https://github.com/hammerandchisel/react-forms"
+    }
+  }
+}
