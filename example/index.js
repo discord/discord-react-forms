@@ -7,6 +7,7 @@ import CheckboxExample from './examples/CheckboxExample';
 import HiddenExample from './examples/HiddenExample';
 import SingleSelectExample from './examples/SingleSelectExample';
 import TextAreaExample from './examples/TextAreaExample';
+import BigFormExample from './examples/BigFormExample';
 
 import './style.styl';
 
@@ -26,6 +27,7 @@ const App = (
     <Example title="Hidden Example"><HiddenExample /></Example>
     <Example title="Single Select Example"><SingleSelectExample /></Example>
     <Example title="TextArea Example"><TextAreaExample /></Example>
+    <Example title="Big Form Example"><BigFormExample /></Example>
   </div>
 );
 
