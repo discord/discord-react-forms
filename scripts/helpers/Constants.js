@@ -1,6 +1,6 @@
 module.exports = {
   LIB_OUTPUT_FILE: 'index.js',
-  EXAMPLE_PORT: 8000,
+  EXAMPLES_PORT: 8000,
   EXAMPLES_FOLDER: './example',
   DOCS_PORT: 8001,
   DOCS_LR_PORT: 35729,

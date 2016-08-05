@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('./helpers/webpack.config');
-const {EXAMPLE_PORT, EXAMPLES_FOLDER} = require('./helpers/Constants');
+const {EXAMPLES_PORT, EXAMPLES_FOLDER} = require('./helpers/Constants');
 
 return new WebpackDevServer(webpack(webpackConfig.getWatchConfig()), {
   contentBase: EXAMPLES_FOLDER,
@@ -15,6 +15,6 @@ return new WebpackDevServer(webpack(webpackConfig.getWatchConfig()), {
   stats: {
     colors: true
   }
-}).listen(EXAMPLE_PORT, err => {
+}).listen(EXAMPLES_PORT, err => {
   console.log('Running webpack server');
 });

@@ -3,7 +3,7 @@ const nib = require('nib');
 const path = require('path');
 const babelOptions = require('./babelOptions.js');
 const webpack = require('webpack');
-const {PORT} = require('./Constants');
+const {EXAMPLES_PORT} = require('./Constants');
 
 const baseOptions = {
   module: {
@@ -50,7 +50,7 @@ function getConfig(build) {
       ],
       entry: [
         './example/index.js',
-        `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
+        `webpack-dev-server/client?http://0.0.0.0:${EXAMPLES_PORT}`,
         'webpack/hot/only-dev-server'
       ],
       output: {
