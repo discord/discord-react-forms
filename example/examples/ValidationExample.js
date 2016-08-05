@@ -1,8 +1,9 @@
 import React from 'react';
-import {Form, TextInput, SubmitButton} from '../../lib';
+import {Form, TextInput, SubmitButton, Validators} from '../../lib';
 
 const ValidationExample = () => (
   <Form submit={submit}>
+    <TextInput name="must-fill-out" validator={Validators.isFilled('Fill this out!')} required label="Fill this out" />
     <TextInput name="text" validator={validator} required label="Must be valid" />
     <SubmitButton canSubmitText="Submit" cannotSubmitText="Cannot Submit" isSubmittingText="Submitting" />
   </Form>
