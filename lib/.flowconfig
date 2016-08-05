@@ -1,0 +1,22 @@
+[ignore]
+.*/node_modules/.*
+
+[include]
+../node_modules
+
+[libs]
+
+[options]
+module.system=node
+module.file_ext=.js
+module.file_ext=.json
+unsafe.enable_getters_and_setters=true
+esproposal.class_static_fields=enable
+suppress_comment= \\(.\\|\\n\\)*\\$FlowFixMe
+esproposal.class_instance_fields=enable
+experimental.strict_type_args=false
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+[version]
+0.30.0
