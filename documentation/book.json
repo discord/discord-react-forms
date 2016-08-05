@@ -1,4 +1,9 @@
 {
+  "title": "React Forms",
+  "structure": {
+    "summary": "summary.md"
+  },
+
   "plugins": [
     "github",
     "edit-link"
