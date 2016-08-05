@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-.cannotSubmit {
+.cannot-submit {
   background: red;
   cursor: no-drop;
 }
