@@ -1,0 +1,437 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>SingleSelect · React Forms</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="text-area.html" />
+    
+    
+    <link rel="prev" href="radio-group.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="components.html">
+            
+                <a href="components.html">
+            
+                    
+                    Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="form.html">
+            
+                <a href="form.html">
+            
+                    
+                    Form
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="submit-button.html">
+            
+                <a href="submit-button.html">
+            
+                    
+                    SubmitButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="checkbox.html">
+            
+                <a href="checkbox.html">
+            
+                    
+                    Checkbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="hidden-field.html">
+            
+                <a href="hidden-field.html">
+            
+                    
+                    HiddenField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="radio-group.html">
+            
+                <a href="radio-group.html">
+            
+                    
+                    RadioGroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="single-select.html">
+            
+                <a href="single-select.html">
+            
+                    
+                    SingleSelect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="text-area.html">
+            
+                <a href="text-area.html">
+            
+                    
+                    TextArea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="text-input.html">
+            
+                <a href="text-input.html">
+            
+                    
+                    TextInput
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../validation/validation.html">
+            
+                <a href="../validation/validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../examples/examples.html">
+            
+                <a href="../examples/examples.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../creating-components/creating-components.html">
+            
+                <a href="../creating-components/creating-components.html">
+            
+                    
+                    Custom Field Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SingleSelect</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="singleselect">SingleSelect</h1><p><code>SingleSelect</code> is a dropdown component that allows you to select a value in a list of choices.</p><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> options = [
+  {
+    value: <span class="hljs-string">&apos;option-1&apos;</span>,
+    label: <span class="hljs-string">&apos;Option 1&apos;</span>
+  },
+  {
+    value: <span class="hljs-string">&apos;option-2&apos;</span>,
+    label: <span class="hljs-string">&apos;Option 2&apos;</span>
+  },
+  {
+    value: <span class="hljs-string">&apos;option-3&apos;</span>
+  },
+];
+
+<span class="hljs-keyword">const</span> SingleSelectExample = () =&gt; (
+  &lt;Form submit={() =&gt; {}}&gt;
+    &lt;SingleSelect name=&quot;single-select&quot; options={options} label=&quot;Single Select&quot; /&gt;
+    &lt;SingleSelect
+      name=&quot;single-select-placeholder&quot;
+      options={options}
+      label=&quot;Single Select&quot;
+      placeholder=&quot;placeholder&quot; /&gt;
+  &lt;/Form&gt;
+);</code></pre>
+<h2 id="props">Props</h2><ul><li><code>name</code> (string, required): This will map to the key in the form
+</li>
+<li><code>label</code> (string): This will be displayed near the field
+</li>
+<li><code>placeholder</code> (string): Text to show the user before a value exists
+</li>
+<li><code>options</code> (Array<object>): An array of objects containing a value and a label
+</object></li>
+<li><code>required</code> (bool): Will tell the field to display a required star next to the label
+</li>
+<li><code>value</code> (string): This is the default value of the field
+</li>
+<li><code>validator</code> (func): a <a href="../validation/validation.html">validator</a> function
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="radio-group.html" class="navigation navigation-prev " aria-label="Previous page: RadioGroup">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="text-area.html" class="navigation navigation-next " aria-label="Next page: TextArea">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SingleSelect","level":"1.2.6","depth":2,"next":{"title":"TextArea","level":"1.2.7","depth":2,"path":"components/text-area.md","ref":"components/text-area.md","articles":[]},"previous":{"title":"RadioGroup","level":"1.2.5","depth":2,"path":"components/radio-group.md","ref":"components/radio-group.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"edit-link":{"label":"Suggest changes","base":"https://github.com/hammerandchisel/react-forms/tree/master"},"github":{"url":"https://github.com/hammerandchisel/react-forms"},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"summary.md"},"variables":{},"title":"React Forms","links":{"home":"discord","sharing":{"twitter":"https://twitter.com/discordapp"}},"gitbook":"*"},"file":{"path":"components/single-select.md","mtime":"2016-08-05T01:14:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-05T01:18:38.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,451 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Validation · React Forms</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../examples/examples.html" />
+    
+    
+    <link rel="prev" href="../components/text-input.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../components/components.html">
+            
+                <a href="../components/components.html">
+            
+                    
+                    Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../components/form.html">
+            
+                <a href="../components/form.html">
+            
+                    
+                    Form
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../components/submit-button.html">
+            
+                <a href="../components/submit-button.html">
+            
+                    
+                    SubmitButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../components/checkbox.html">
+            
+                <a href="../components/checkbox.html">
+            
+                    
+                    Checkbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../components/hidden-field.html">
+            
+                <a href="../components/hidden-field.html">
+            
+                    
+                    HiddenField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../components/radio-group.html">
+            
+                <a href="../components/radio-group.html">
+            
+                    
+                    RadioGroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../components/single-select.html">
+            
+                <a href="../components/single-select.html">
+            
+                    
+                    SingleSelect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../components/text-area.html">
+            
+                <a href="../components/text-area.html">
+            
+                    
+                    TextArea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../components/text-input.html">
+            
+                <a href="../components/text-input.html">
+            
+                    
+                    TextInput
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../examples/examples.html">
+            
+                <a href="../examples/examples.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../creating-components/creating-components.html">
+            
+                <a href="../creating-components/creating-components.html">
+            
+                    
+                    Custom Field Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Validation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="validation">Validation</h1><h2 id="client-side-validation">Client side validation</h2><p>Most components can have a validator function attached to them.</p><p>A Validator function takes two parameters, a <code>name</code> and a <code>field</code>.
+The <code>name</code> will tell you which field is being validated, and the field will give you access to the field&apos;s data.</p><p>The validator should either return an error or nothing.
+If a validator returns a truthy value, the field will be invalid and the error will be displayed along side the field.</p><h3 id="example">Example</h3><p>This example checks if the value is equal to <code>&apos;bad&apos;</code> and returns <code>&apos;error!&apos;</code> as the error if it is.
+Otherwise, it returns undefined, and the field is valid.</p><pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validator</span>(<span class="hljs-params">name, {value}</span>) </span>{
+  <span class="hljs-keyword">if</span> (value == <span class="hljs-string">&apos;bad&apos;</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;error!&apos;</span>;
+  }
+}</code></pre>
+<h2 id="server-side-validation">Server side validation</h2><p>The submit funtion the form takes is required to call the callback in order for the form to know it is done submitting.
+Along with this, you have the opportunity to alert the users of any errors by passing an object into the callback.
+This should contain keys that map to the field&apos;s name that contains the error, with a value of the error.</p><h3 id="example">Example</h3><p>In this example, we check to see if the field with the name <code>text</code>&apos;s value is not <code>good</code>.
+If it is not, we callback with an error.
+Otherwise, we callback without an object, therefore, no errors.</p><pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submit</span>(<span class="hljs-params">values, callback</span>) </span>{
+  setTimeout(() =&gt; {
+    <span class="hljs-keyword">if</span> (values.text != <span class="hljs-string">&apos;good&apos;</span>) {
+      callback({text: <span class="hljs-string">&apos;Oh no! Something bad happened on the server&apos;</span>});
+    }
+    <span class="hljs-keyword">else</span> {
+      callback();
+    }
+  }, <span class="hljs-number">1000</span>);</code></pre>
+<h2 id="full-example">Full example</h2><p>This example puts client and server side validation together.
+It will prevent users from submiting the value <code>bad</code> on the client, and any value that does not equal <code>good</code> will be
+rejected on the fake server.</p><pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validator</span>(<span class="hljs-params">name, {value}</span>) </span>{
+  <span class="hljs-keyword">if</span> (!value.length) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Yo, fill this out&apos;</span>;
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value == <span class="hljs-string">&apos;bad&apos;</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;That value is no good&apos;</span>;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submit</span>(<span class="hljs-params">values, callback</span>) </span>{
+  setTimeout(() =&gt; {
+    <span class="hljs-keyword">if</span> (values.text != <span class="hljs-string">&apos;good&apos;</span>) {
+      callback({text: <span class="hljs-string">&apos;Oh no! Something bad happened on the server&apos;</span>});
+    }
+    <span class="hljs-keyword">else</span> {
+      callback();
+    }
+  }, <span class="hljs-number">1000</span>);
+
+<span class="hljs-keyword">const</span> ValidationExample = () =&gt; (
+  &lt;Form submit={submit}&gt;
+    &lt;TextInput name=&quot;text&quot; validator={validator} required label=&quot;Must be valid&quot; /&gt;
+    &lt;SubmitButton
+      canSubmitText=&quot;Submit&quot;
+      cannotSubmitText=&quot;Cannot Submit&quot;
+      isSubmittingText=&quot;Submitting&quot; /&gt;
+  &lt;/Form&gt;
+);
+}</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../components/text-input.html" class="navigation navigation-prev " aria-label="Previous page: TextInput">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../examples/examples.html" class="navigation navigation-next " aria-label="Next page: Examples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Validation","level":"1.3","depth":1,"next":{"title":"Examples","level":"1.4","depth":1,"path":"examples/examples.md","ref":"examples/examples.md","articles":[]},"previous":{"title":"TextInput","level":"1.2.8","depth":2,"path":"components/text-input.md","ref":"components/text-input.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"edit-link":{"label":"Suggest changes","base":"https://github.com/hammerandchisel/react-forms/tree/master"},"github":{"url":"https://github.com/hammerandchisel/react-forms"},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"summary.md"},"variables":{},"title":"React Forms","links":{"home":"discord","sharing":{"twitter":"https://twitter.com/discordapp"}},"gitbook":"*"},"file":{"path":"validation/validation.md","mtime":"2016-08-05T01:15:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-05T01:18:38.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

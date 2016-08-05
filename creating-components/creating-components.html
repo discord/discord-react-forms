@@ -1,0 +1,400 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Custom Field Components · React Forms</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../examples/examples.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../components/components.html">
+            
+                <a href="../components/components.html">
+            
+                    
+                    Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../components/form.html">
+            
+                <a href="../components/form.html">
+            
+                    
+                    Form
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../components/submit-button.html">
+            
+                <a href="../components/submit-button.html">
+            
+                    
+                    SubmitButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../components/checkbox.html">
+            
+                <a href="../components/checkbox.html">
+            
+                    
+                    Checkbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../components/hidden-field.html">
+            
+                <a href="../components/hidden-field.html">
+            
+                    
+                    HiddenField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../components/radio-group.html">
+            
+                <a href="../components/radio-group.html">
+            
+                    
+                    RadioGroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../components/single-select.html">
+            
+                <a href="../components/single-select.html">
+            
+                    
+                    SingleSelect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../components/text-area.html">
+            
+                <a href="../components/text-area.html">
+            
+                    
+                    TextArea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../components/text-input.html">
+            
+                <a href="../components/text-input.html">
+            
+                    
+                    TextInput
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../validation/validation.html">
+            
+                <a href="../validation/validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../examples/examples.html">
+            
+                <a href="../examples/examples.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="creating-components.html">
+            
+                <a href="creating-components.html">
+            
+                    
+                    Custom Field Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Custom Field Components</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="custom-field-components">Custom Field Components</h1><p>If you would like to create your own custom component, it would be ideal to extend <code>FieldMixin</code>.
+This mixin contains many helper functions for interacting with a form.</p><h2 id="fieldmixin">FieldMixin</h2><p>FieldMixin is the base of each Field component. It talks to the Form through its context, and attaches all methods from
+its context to <code>this</code>.</p><h3 id="helper-functions">Helper functions</h3><p><code>getField(name=this.props.name)</code>: asks the form for a field&apos;s data</p><p><code>initField(data)</code>: tells the form to initialize a field with this data.
+By default, it will include <code>name</code>, <code>value</code>, <code>validator</code> from its props.</p><p><code>setHasBeenTouched({name=this.props.name, touched=true}={})</code>: tells the form that the field has been touched/edited.
+This is useful for fields that are required and you want to prompt the user to edit a field,
+but you do not want to show an error when the user loads the form.</p><p><code>setField({name=this.props.name, ...rest}={})</code>: tells the form to set the field data.
+By default, it will include the name. Anything else must be passed in the object.</p><p><code>isSubmitting()</code>: Asks the form if it is currently being submitted.</p><p><code>canSubmit()</code>: Asks the form whether or not it can be submitted.</p><p><code>submit()</code>: Tells the form to submit.
+This will call the <code>submit</code> prop passed to the <a href="../components/form.html"><code>Form</code></a> component</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../examples/examples.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Examples">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Custom Field Components","level":"1.5","depth":1,"previous":{"title":"Examples","level":"1.4","depth":1,"path":"examples/examples.md","ref":"examples/examples.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"edit-link":{"label":"Suggest changes","base":"https://github.com/hammerandchisel/react-forms/tree/master"},"github":{"url":"https://github.com/hammerandchisel/react-forms"},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"summary.md"},"variables":{},"title":"React Forms","links":{"home":"discord","sharing":{"twitter":"https://twitter.com/discordapp"}},"gitbook":"*"},"file":{"path":"creating-components/creating-components.md","mtime":"2016-08-05T00:12:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-05T01:18:38.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
