@@ -32,6 +32,7 @@
     "react-dom": "^15.2.1"
   },
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "babel-cli": "^6.11.4",
     "babel-eslint": "^6.1.2",
     "babel-jest": "^14.1.0",
@@ -59,9 +60,11 @@
     "nib": "^1.1.0",
     "nodegit": "^0.14.1",
     "npm": "^3.10.5",
+    "postcss": "^5.1.1",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-color-function": "^2.0.1",
     "postcss-import": "^8.1.2",
+    "postcss-inline-comment": "^3.0.0",
     "postcss-loader": "^0.9.1",
     "postcss-pxtorem": "^3.3.1",
     "postcss-reporter": "^1.4.1",

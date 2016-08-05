@@ -1,0 +1,18 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.required-label-wrapper {
+  margin-bottom: 8px;
+}
+
+.required-star {
+}
+
+.label {
+}
+
+.error {
+  color: red;
+}

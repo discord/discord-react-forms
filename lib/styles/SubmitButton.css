@@ -1,0 +1,19 @@
+.submit-button {
+  padding: 10px 8px;
+  border-radius: 4px;
+}
+
+.can-submit {
+  background: rgb(114, 137, 218);
+  cursor: pointer;
+}
+
+.cannotSubmit {
+  background: red;
+  cursor: no-drop;
+}
+
+.submitting {
+  background: grey;
+  cursor: progress;
+}

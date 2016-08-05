@@ -9,18 +9,17 @@ import SingleSelectExample from './examples/SingleSelectExample';
 import TextAreaExample from './examples/TextAreaExample';
 import BigFormExample from './examples/BigFormExample';
 import styles from './style.css';
-import './style.styl';
 
-const Example = ({title, className, children}) => (
-  <div className={`example ${className}`}>
+const Example = ({title, children}) => (
+  <div className={styles.example}>
     <h2>{title}</h2>
     {children}
   </div>
 );
 
 const App = (
-  <div className="container">
-    <Example title="Basic Example" className={styles.testElement}><BasicExample /></Example>
+  <div>
+    <Example title="Basic Example"><BasicExample /></Example>
     <Example title="Validation Example"><ValidationExample /></Example>
     <Example title="Listening Example"><ListeningExample /></Example>
     <Example title="Checkbox Example"><CheckboxExample /></Example>

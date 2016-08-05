@@ -15,23 +15,15 @@ const baseOptions = {
         query: babelOptions
       },
       {
-        test: /\.styl$/,
-        loader: 'style!css!stylus'
-      },
-      {
         test: /\.css$/,
         exclude: /node_modules/,
         loaders: [
           'style',
-          'css?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'css?camelCase&modules&sourceMap&importLoaders=1&localIdentName=forms-[local]',
           'postcss'
         ]
       }
     ]
-  },
-  stylus: {
-    use: [nib()],
-    import: ['~nib/lib/nib/index.styl']
   },
   postcss: [
     require('postcss-import')(),
@@ -43,7 +35,9 @@ const baseOptions = {
     require('postcss-pxtorem')(),
     require('postcss-color-function')(),
     require('postcss-reporter'),
-    require('postcss-browser-reporter')
+    require('postcss-browser-reporter'),
+    require('postcss-inline-comment'),
+    require('autoprefixer')({browsers: ['last 2 versions']})
   ]
 };
 

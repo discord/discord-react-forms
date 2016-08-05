@@ -1,10 +1,16 @@
 import React from 'react';
 import {Form, TextInput, SubmitButton, Validators} from '../../lib';
+import styles from '../style.css';
 
 const ValidationExample = () => (
   <Form submit={submit}>
-    <TextInput name="must-fill-out" validator={Validators.isFilled('Fill this out!')} required label="Fill this out" />
-    <TextInput name="text" validator={validator} required label="Must be valid" />
+    <div className={styles.row}>
+      <TextInput required
+        name="must-fill-out"
+        validator={Validators.isFilled('Fill this out!')}
+        label="Fill this out" />
+      <TextInput name="text" validator={validator} required label="Must be valid" />
+    </div>
     <SubmitButton canSubmitText="Submit" cannotSubmitText="Cannot Submit" isSubmittingText="Submitting" />
   </Form>
 );
