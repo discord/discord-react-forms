@@ -1,0 +1,11 @@
+:root {
+  $background: #f4f5f6;
+}
+
+:global(body) {
+  background: $background;
+}
+
+.testElement {
+  color: blue;
+}

@@ -15,15 +15,36 @@ const baseOptions = {
         query: babelOptions
       },
       {
-        test: /\.(styl|css)$/,
+        test: /\.styl$/,
         loader: 'style!css!stylus'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loaders: [
+          'style',
+          'css?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'postcss'
+        ]
       }
     ]
   },
   stylus: {
     use: [nib()],
     import: ['~nib/lib/nib/index.styl']
-  }
+  },
+  postcss: [
+    require('postcss-import')(),
+    require('postcss-simple-vars')({ silent: true }),
+    require('postcss-url')({
+      url: 'inline'
+    }),
+    require('postcss-short-size')(),
+    require('postcss-pxtorem')(),
+    require('postcss-color-function')(),
+    require('postcss-reporter'),
+    require('postcss-browser-reporter')
+  ]
 };
 
 function getWatchConfig() {

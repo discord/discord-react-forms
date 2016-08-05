@@ -8,11 +8,11 @@ import HiddenExample from './examples/HiddenExample';
 import SingleSelectExample from './examples/SingleSelectExample';
 import TextAreaExample from './examples/TextAreaExample';
 import BigFormExample from './examples/BigFormExample';
-
+import styles from './style.css';
 import './style.styl';
 
-const Example = ({title, children}) => (
-  <div className="example">
+const Example = ({title, className, children}) => (
+  <div className={`example ${className}`}>
     <h2>{title}</h2>
     {children}
   </div>
@@ -20,7 +20,7 @@ const Example = ({title, children}) => (
 
 const App = (
   <div className="container">
-    <Example title="Basic Example"><BasicExample /></Example>
+    <Example title="Basic Example" className={styles.testElement}><BasicExample /></Example>
     <Example title="Validation Example"><ValidationExample /></Example>
     <Example title="Listening Example"><ListeningExample /></Example>
     <Example title="Checkbox Example"><CheckboxExample /></Example>
