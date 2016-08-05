@@ -1,8 +1,10 @@
 # react-forms
 
-Something about how this library makes writing forms in React easy... Or something like that
+This library makes writing forms in React easy.  By using context passing, your Form element can manage all the internal elements to adapt and many complex functionalities.
+
+[Check out our docs](https://hammerandchisel.github.io/react-forms/)
 
 ## Developing
 
 Install dependencies with `npm install`, then run `npm run watch`.
-Navagate to [localhost:8000](http://localhost:8000) and you should see the example pages.
+Navigate to [localhost:8000](http://localhost:8000) and you should see the example pages.
