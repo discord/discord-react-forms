@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, TextInput, SubmitButton, Validators} from '../../lib';
+import {Form, TextInput, SubmitButton, Validators} from '../../index';
 import styles from '../style.css';
 
 const ValidationExample = () => (

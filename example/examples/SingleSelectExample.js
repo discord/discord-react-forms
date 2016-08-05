@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, SingleSelect} from '../../lib';
+import {Form, SingleSelect} from '../../index';
 
 const options = [
   {

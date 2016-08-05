@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, TextInput, SubmitButton} from '../../lib';
+import {Form, TextInput, SubmitButton} from '../../index';
 
 const ListeningExample = React.createClass({
   getInitialState() {

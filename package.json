@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "clean": "node scripts/clean.js",
-    "watch": "node scripts/watch.js",
+    "watch": "npm run build && node scripts/watch.js",
     "docs:watch": "node scripts/docs-watch.js",
     "docs:build": "node scripts/docs-build.js",
     "prepublish": "npm run build",

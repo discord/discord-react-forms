@@ -1,6 +1,5 @@
 import React from 'react';
-import {Form, TextInput, SubmitButton} from '../../lib';
-
+import {Form, TextInput, SubmitButton} from '../../index';
 import styles from '../style.css';
 
 const textInputs = [];

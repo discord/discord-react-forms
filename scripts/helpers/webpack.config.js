@@ -54,7 +54,10 @@ function getConfig(build) {
   if (build) {
     options = {
       entry: './lib/index.js',
-      output: {filename: 'index.js'}
+      output: {
+        filename: 'index.js',
+        libraryTarget: 'umd'
+      }
     };
   }
   else {

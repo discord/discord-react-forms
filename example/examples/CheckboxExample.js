@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Checkbox, RadioInput, RadioGroup} from '../../lib';
+import {Form, Checkbox, RadioInput, RadioGroup} from '../../index';
 
 const radioGroupOptions = [
   {value: 'radio-group-1', label: 'Radio group 1'},
