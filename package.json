@@ -8,7 +8,7 @@
     "clean": "node scripts/clean.js",
     "watch": "npm run build && node scripts/watch.js",
     "docs:watch": "node scripts/docs-watch.js",
-    "docs:build": "node scripts/docs-build.js",
+    "docs:build": "npm run clean && npm run build && node scripts/docs-build.js",
     "prepublish": "npm run build",
     "test": "jest"
   },

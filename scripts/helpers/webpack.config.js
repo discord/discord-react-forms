@@ -3,7 +3,7 @@ const nib = require('nib');
 const path = require('path');
 const babelOptions = require('./babelOptions.js');
 const webpack = require('webpack');
-const {EXAMPLES_PORT} = require('./Constants');
+const {EXAMPLES_PORT, LIB_FOLDER, EXAMPLES_FOLDER, EXAMPLES_OUTPUT_FOLDER} = require('./Constants');
 
 const baseOptions = {
   module: {
@@ -42,25 +42,29 @@ const baseOptions = {
 };
 
 function getWatchConfig() {
-  return getConfig(false);
+  return getConfig('watch');
 }
 
 function getBuildConfig() {
-  return getConfig(true);
+  return getConfig('build');
 }
 
-function getConfig(build) {
+function getExampleBuildConfig() {
+  return getConfig('example-build');
+}
+
+function getConfig(target) {
   let options;
-  if (build) {
+  if (target == 'build') {
     options = {
-      entry: './lib/index.js',
+      entry: `${LIB_FOLDER}/index.js`,
       output: {
         filename: 'index.js',
         libraryTarget: 'umd'
       }
     };
   }
-  else {
+  else if (target == 'watch') {
     options = {
       devtool: 'source-map',
       loaders: [
@@ -72,9 +76,9 @@ function getConfig(build) {
         'webpack/hot/only-dev-server'
       ],
       output: {
-        path: path.resolve(__dirname, 'build'),
-        publicPath: '/assets/',
-        filename: 'index.js'
+        path: path.resolve('./', EXAMPLES_OUTPUT_FOLDER),
+        filename: 'index.js',
+        publicPath: '/assets/'
       },
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -82,8 +86,18 @@ function getConfig(build) {
       ]
     };
   }
+  else if (target == 'example-build') {
+    options = {
+      entry: `${EXAMPLES_FOLDER}/index.js`,
+      output: {
+        path: path.resolve('./', EXAMPLES_OUTPUT_FOLDER),
+        filename: 'index.js',
+        publicPath: '/assets/'
+      }
+    };
+  }
 
   return Object.assign({}, options, baseOptions);
 }
 
-module.exports = {getWatchConfig, getBuildConfig};
+module.exports = {getWatchConfig, getBuildConfig, getExampleBuildConfig};

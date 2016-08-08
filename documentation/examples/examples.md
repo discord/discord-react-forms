@@ -1,7 +1,9 @@
 # Examples
 
+Examples are live [here](../../example/index.html)
+
 All examples can be found in the [examples](https://github.com/hammerandchisel/react-forms/tree/master/example/examples)
-folder
+folder.
 
 ## Running
 In order to run these:
