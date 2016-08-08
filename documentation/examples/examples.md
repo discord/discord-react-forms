@@ -1,6 +1,6 @@
 # Examples
 
-Examples are live [here](../../example/index.html)
+Examples are live [here](https://hammerandchisel.github.io/react-forms/example/)
 
 All examples can be found in the [examples](https://github.com/hammerandchisel/react-forms/tree/master/example/examples)
 folder.
