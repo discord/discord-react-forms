@@ -2,8 +2,6 @@ jest.unmock('../../lib/components/SubmitButton');
 jest.unmock('../../lib/components/common/FieldMixin');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
 import Chance from 'chance';
 import {mount} from 'enzyme';
 import {getStubbedContext} from '../helpers';
@@ -28,7 +26,7 @@ describe('SubmitButton tests', () => {
         mountOptions
       );
 
-      const foundButton = button.find('.form-submit-button');
+      const foundButton = button.find('.submit-button');
       expect(foundButton.props().children).toBe(canSubmitText);
     });
 
@@ -45,7 +43,7 @@ describe('SubmitButton tests', () => {
         mountOptions
       );
 
-      const foundButton = button.find('.form-submit-button');
+      const foundButton = button.find('.submit-button');
       expect(foundButton.props().children).toBe(cannotSubmitText);
     });
 
@@ -62,7 +60,7 @@ describe('SubmitButton tests', () => {
         mountOptions
       );
 
-      const foundButton = button.find('.form-submit-button');
+      const foundButton = button.find('.submit-button');
       expect(foundButton.props().children).toBe(isSubmittingText);
     });
   });

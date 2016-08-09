@@ -60,6 +60,10 @@
     "flowtype/space-before-type-colon": ["error", "never"],
     "flow-vars/define-flow-type": 1,
     "flow-vars/use-flow-type": 1,
-    "prefer-const": ["error", {"destructuring": "all"}]
+    "prefer-const": ["error", {"destructuring": "all"}],
+    "no-unused-vars": ["error", {"argsIgnorePattern": "^_" }],
+    "no-var": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
   }
 }

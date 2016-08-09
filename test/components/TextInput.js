@@ -3,8 +3,6 @@ jest.unmock('../../lib/components/common/FieldMixin');
 jest.unmock('../../lib/components/common/FieldWrapper');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
 import Chance from 'chance';
 import {mount} from 'enzyme';
 import {getStubbedContext} from '../helpers';
@@ -35,7 +33,7 @@ describe('TextInput tests', () => {
       const value = chance.string();
 
       stubbedContext.getField.mockReturnValue({value});
-      const textInput = mount(<TextInput name={name} value={value} />, mountOptions);
+      mount(<TextInput name={name} value={value} />, mountOptions);
 
       expect(stubbedContext.initField).toBeCalledWith({name, value, hasDefaultValue: true});
       expect(stubbedContext.getField).toBeCalled();

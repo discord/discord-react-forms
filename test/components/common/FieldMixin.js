@@ -1,8 +1,5 @@
 jest.unmock('../../../lib/components/common/FieldMixin');
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
 import Chance from 'chance';
 import {getStubbedContext} from '../../helpers';
 import FieldMixin from '../../../lib/components/common/FieldMixin';

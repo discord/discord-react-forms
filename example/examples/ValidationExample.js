@@ -9,7 +9,7 @@ const ValidationExample = () => (
         name="must-fill-out"
         validator={Validators.isFilled('Fill this out!')}
         label="Fill this out" />
-      <TextInput name="text" validator={validator} required label="Must be valid" />
+      <TextInput name="text" validator={validator} required label="Must be valid" intervalCheck={1000} />
     </div>
     <SubmitButton canSubmitText="Submit" cannotSubmitText="Cannot Submit" isSubmittingText="Submitting" />
   </Form>

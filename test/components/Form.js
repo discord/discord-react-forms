@@ -1,7 +1,6 @@
 jest.unmock('../../lib/components/Form');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import Chance from 'chance';
 import Form from '../../lib/components/Form';
@@ -19,7 +18,7 @@ describe('Form tests', () => {
 
       form.initField({name, value});
 
-      const expected = {value, hasBeenTouched: false, error: null};
+      const expected = {value, hasBeenTouched: false, error: null, displayError: false};
       expect(form.state.fields[name]).toEqual(expected);
     });
 
@@ -31,7 +30,8 @@ describe('Form tests', () => {
 
       form.initField({name, value});
 
-      expect(onFieldUpdate).toBeCalledWith(name, {value: value, hasBeenTouched: false, error: null});
+      const expected = {value: value, hasBeenTouched: false, error: null, displayError: false};
+      expect(onFieldUpdate).toBeCalledWith(name, expected);
     });
   });
 
@@ -46,7 +46,7 @@ describe('Form tests', () => {
 
       form.setField({name, value: value2});
 
-      const expected = {value: value2, hasBeenTouched: true, error: null};
+      const expected = {value: value2, hasBeenTouched: true, error: null, displayError: true};
       expect(form.state.fields[name]).toEqual(expected);
     });
 
@@ -62,7 +62,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value, validator}}});
       form.setField({name, value: value2});
 
-      const expected = {value: value2, hasBeenTouched: true, error, validator};
+      const expected = {value: value2, hasBeenTouched: true, error, validator, displayError: true};
       expect(form.state.fields[name]).toEqual(expected);
       expect(validator.mock.calls.length).toBe(1);
     });
@@ -77,7 +77,8 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value}}});
       form.setField({name, value: value2});
 
-      expect(onFieldUpdate).toBeCalledWith(name, {value: value2, hasBeenTouched: true, error: null});
+      const expected = {value: value2, hasBeenTouched: true, error: null, displayError: true};
+      expect(onFieldUpdate).toBeCalledWith(name, expected);
     });
   });
 
