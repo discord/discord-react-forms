@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, HiddenField, SubmitButton} from '../../index';
+import {Form, HiddenField, SubmitButton} from '../../lib';
 
 const HiddenExample = React.createClass({
   submit(values, callback) {

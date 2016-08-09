@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, TextInput, SubmitButton} from '../../index';
+import {Form, TextInput, SubmitButton} from '../../lib';
 import styles from '../style.css';
 
 const BasicExample = () => (

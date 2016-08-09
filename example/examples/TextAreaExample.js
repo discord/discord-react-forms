@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, TextArea} from '../../index';
+import {Form, TextArea} from '../../lib';
 
 function validator(name, {value}) {
   if (value == 'bad') {
