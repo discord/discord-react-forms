@@ -71,7 +71,7 @@ function getConfig(target) {
         {test: /\.js$/, exclude: /node_modules/, loader: 'react-hot'},
       ],
       entry: [
-        './example/index.js',
+        `${EXAMPLES_FOLDER}/index.js`,
         `webpack-dev-server/client?http://0.0.0.0:${EXAMPLES_PORT}`,
         'webpack/hot/only-dev-server'
       ],
