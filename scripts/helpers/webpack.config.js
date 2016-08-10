@@ -1,5 +1,3 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const nib = require('nib');
 const path = require('path');
 const babelOptions = require('./babelOptions.js');
 const webpack = require('webpack');

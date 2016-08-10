@@ -1,12 +1,10 @@
-jest.unmock('../../lib/components/TextInput');
-jest.unmock('../../lib/components/common/FieldMixin');
-jest.unmock('../../lib/components/common/FieldWrapper');
+jest.unmock('../../index');
 
 import React from 'react';
 import Chance from 'chance';
 import {mount} from 'enzyme';
 import {getStubbedContext} from '../helpers';
-import TextInput from '../../lib/components/TextInput';
+import {TextInput} from '../../index';
 
 describe('TextInput tests', () => {
   const chance = new Chance();
@@ -24,7 +22,7 @@ describe('TextInput tests', () => {
       const textInput = mount(<TextInput name={name} />, mountOptions);
 
       expect(stubbedContext.initField).toBeCalledWith({name, value: '', hasDefaultValue: false});
-      expect(textInput.find('.form-text-input').props().value).toBe(value);
+      expect(textInput.find('.forms-text-input').props().value).toBe(value);
       expect(stubbedContext.getField).toBeCalled();
     });
 
@@ -47,33 +45,28 @@ describe('TextInput tests', () => {
 
       const textInput = mount(<TextInput name={name} placeholder={placeholder} />, mountOptions);
 
-      const foundInput = textInput.find('.form-text-input');
+      const foundInput = textInput.find('.forms-text-input');
       expect(foundInput.props().placeholder).toBe(placeholder);
     });
 
     it('should not contain a placeholder if the prop is not given', () => {
       const textInput = mount(<TextInput name={name} />, mountOptions);
 
-      const foundInput = textInput.find('.form-text-input');
+      const foundInput = textInput.find('.forms-text-input');
       expect(foundInput.props().placeholder).toBe('');
     });
   });
 
   describe('On change tests', () => {
     it('should call the correct funtions and update its value on change', () => {
+      stubbedContext.getField.mockClear();
       const name = chance.string();
       const value = chance.string();
-      const value2 = chance.string();
 
-      stubbedContext.getField.mockReturnValue({value});
       const textInput = mount(<TextInput name={name} />, mountOptions);
-      stubbedContext.getField.mockReturnValue({value: value2});
-      textInput.instance().onChange({target: {value: value2}});
-      textInput.update();
+      textInput.instance().onChange({target: {value: value}});
 
-      const foundInput = textInput.find('.form-text-input');
-      expect(stubbedContext.setField).toBeCalledWith({name, value: value2});
-      expect(foundInput.props().value).toBe(value2);
+      expect(stubbedContext.setField).toBeCalledWith({name, value: value});
     });
   });
 });

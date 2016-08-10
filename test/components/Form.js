@@ -1,16 +1,15 @@
-jest.unmock('../../lib/components/Form');
+jest.unmock('../../index');
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import Chance from 'chance';
-import Form from '../../lib/components/Form';
+import {Form} from '../../index';
 const noop = () => {};
 
 describe('Form tests', () => {
   const chance = new Chance();
 
   describe('Init field tests', () => {
-
     it('should have the correct values', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();

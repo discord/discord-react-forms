@@ -10,7 +10,7 @@
     "docs:watch": "node scripts/docs-watch.js",
     "docs:build": "npm run clean && npm run build && node scripts/docs-build.js",
     "prepublish": "npm run build",
-    "test": "jest"
+    "test": "npm run build && jest"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +24,7 @@
       "node_modules/chance",
       "node_modules/enzyme",
       "test/helpers"
-    ],
-    "scriptPreprocessor": "node_modules/jest-css-modules"
+    ]
   },
   "dependencies": {
     "react": "^15.3.0",
@@ -59,7 +58,6 @@
     "http-server": "^0.9.0",
     "install": "^0.8.1",
     "jest-cli": "^14.1.0",
-    "jest-css-modules": "^1.0.2",
     "nib": "^1.1.0",
     "nodegit": "^0.14.1",
     "npm": "^3.10.5",

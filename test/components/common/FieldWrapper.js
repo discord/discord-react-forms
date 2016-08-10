@@ -1,9 +1,9 @@
-jest.unmock('../../../lib/components/common/FieldWrapper');
+jest.unmock('../../../index');
 
 import React from 'react';
 import Chance from 'chance';
 import {mount} from 'enzyme';
-import FieldWrapper from '../../../lib/components/common/FieldWrapper';
+import {FieldWrapper} from '../../../index';
 
 describe('FieldWrapper tests', () => {
   const chance = new Chance();
@@ -14,7 +14,7 @@ describe('FieldWrapper tests', () => {
 
       const wrapper = mount(<FieldWrapper label={label} />);
 
-      const foundLabel = wrapper.find('.label');
+      const foundLabel = wrapper.find('.forms-label');
       expect(foundLabel.length).toBe(1);
       expect(foundLabel.props().children).toBe(label);
     });
@@ -22,7 +22,7 @@ describe('FieldWrapper tests', () => {
     it('should not contain a label when not given the prop', () => {
       const wrapper = mount(<FieldWrapper />);
 
-      const foundLabel = wrapper.find('.label');
+      const foundLabel = wrapper.find('.forms-label');
       expect(foundLabel.length).toBe(0);
     });
   });
@@ -31,7 +31,7 @@ describe('FieldWrapper tests', () => {
     it('should include the required star when required', () => {
       const wrapper = mount(<FieldWrapper required />);
 
-      const foundRequired = wrapper.find('.required-star');
+      const foundRequired = wrapper.find('.forms-required-star');
       expect(foundRequired.length).toBe(1);
       expect(foundRequired.props().children).toBe('* ');
     });
@@ -39,26 +39,35 @@ describe('FieldWrapper tests', () => {
     it('should not include the required star if not required', () => {
       const wrapper = mount(<FieldWrapper />);
 
-      const foundRequired = wrapper.find('.required-star');
+      const foundRequired = wrapper.find('.forms-required-star');
       expect(foundRequired.length).toBe(0);
     });
   });
 
   describe('Error tests', () => {
-    it('should include an error when given the prop', () => {
+    it('should include an error when given the an error and displayError props', () => {
+      const error = chance.string();
+
+      const wrapper = mount(<FieldWrapper error={error} displayError={true} />);
+
+      const foundError = wrapper.find('.forms-error');
+      expect(foundError.length).toBe(1);
+      expect(foundError.props().children).toBe(error);
+    });
+
+    it('should not include an error when given an error, but no displayError prop', () => {
       const error = chance.string();
 
       const wrapper = mount(<FieldWrapper error={error} />);
 
-      const foundError = wrapper.find('.error');
-      expect(foundError.length).toBe(1);
-      expect(foundError.props().children).toBe(error);
+      const foundError = wrapper.find('.forms-error');
+      expect(foundError.length).toBe(0);
     });
 
     it('should not include an error when not given the prop', () => {
       const wrapper = mount(<FieldWrapper />);
 
-      const foundError = wrapper.find('.error');
+      const foundError = wrapper.find('.forms-error');
       expect(foundError.length).toBe(0);
     });
   });

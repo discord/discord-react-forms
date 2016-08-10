@@ -1,8 +1,8 @@
-jest.unmock('../../../lib/components/common/FieldMixin');
+jest.unmock('../../../index');
 
 import Chance from 'chance';
 import {getStubbedContext} from '../../helpers';
-import FieldMixin from '../../../lib/components/common/FieldMixin';
+import {FieldMixin} from '../../../index';
 
 describe('FieldMixin tests', () => {
   const stubbedContext = getStubbedContext();
