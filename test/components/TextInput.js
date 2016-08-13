@@ -8,7 +8,6 @@ import {TextInput} from '../../index';
 
 describe('TextInput tests', () => {
   const chance = new Chance();
-  console.log(getStubbedContext);
   const stubbedContext = getStubbedContext();
 
   const mountOptions = {context: stubbedContext};
