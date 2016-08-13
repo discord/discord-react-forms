@@ -30,6 +30,7 @@
     "react": "^15.3.0",
     "react-addons-pure-render-mixin": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-mixin": "^3.0.5",
     "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "babel-jest": "^14.1.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-react": "^6.11.1",

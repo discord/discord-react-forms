@@ -5,7 +5,8 @@ module.exports = {
     'stage-0'
   ],
   plugins: [
-    'add-module-exports'
+    'add-module-exports',
+    'transform-decorators-legacy'
   ],
   compact: true
 };
