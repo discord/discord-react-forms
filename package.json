@@ -9,7 +9,7 @@
     "watch": "npm run build && node scripts/watch.js",
     "docs:watch": "node scripts/docs-watch.js",
     "docs:build": "npm run clean && npm run build && node scripts/docs-build.js",
-    "postinstall": "npm run build",
+    "postinstall": "npm run install && npm run build",
     "test": "npm run build && jest"
   },
   "author": "",
