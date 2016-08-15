@@ -42,7 +42,6 @@ describe('Form tests', () => {
       const value2 = chance.string();
 
       form.setState({fields: {[name]: {value}}});
-
       form.setField({name, value: value2});
 
       const expected = {value: value2, hasBeenTouched: true, error: null, displayError: true};
