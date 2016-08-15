@@ -1,5 +1,5 @@
 {
-  "name": "react-forms",
+  "name": "discord-react-forms",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -35,9 +35,9 @@
     ]
   },
   "dependencies": {
-    "react": "^15.3.0",
+    "react": "15.0.2",
     "react-addons-pure-render-mixin": "^15.2.1",
-    "react-dom": "^15.2.1",
+    "react-dom": "15.0.2",
     "react-mixin": "^3.0.5",
     "react-timer-mixin": "^0.13.3"
   },
