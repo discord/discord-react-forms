@@ -12,8 +12,16 @@
     "prepublish": "npm run build",
     "test": "npm run build && jest"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammerandchisel/react-forms.git"
+  },
+  "author": "Discord, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hammerandchisel/react-forms/issues"
+  },
+  "homepage": "https://hammerandchisel.github.io/react-forms/",
   "jest": {
     "testDirectoryName": "test",
     "testPathIgnorePatterns": [
