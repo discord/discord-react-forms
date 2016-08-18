@@ -44,7 +44,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value}}});
       form.setField({name, value: value2});
 
-      const expected = {value: value2, hasBeenTouched: true, error: null, displayError: true};
+      const expected = {value: value2, error: null};
       expect(form.state.fields[name]).toEqual(expected);
     });
 
@@ -60,7 +60,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value, validator}}});
       form.setField({name, value: value2});
 
-      const expected = {value: value2, hasBeenTouched: true, error, validator, displayError: true};
+      const expected = {value: value2, error, validator};
       expect(form.state.fields[name]).toEqual(expected);
       expect(validator.mock.calls.length).toBe(1);
     });
@@ -75,7 +75,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value}}});
       form.setField({name, value: value2});
 
-      const expected = {value: value2, hasBeenTouched: true, error: null, displayError: true};
+      const expected = {value: value2, error: null};
       expect(onFieldUpdate).toBeCalledWith(name, expected);
     });
   });
@@ -162,18 +162,6 @@ describe('Form tests', () => {
       expect(form.canSubmit()).toBe(true);
     }),
 
-    it('should not be submittable when a required field has not been edited', () => {
-      const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
-      const name = chance.string();
-      const value = chance.string();
-      const validator = jest.fn();
-
-      form.setState({fields: {[name]: {name, value, validator}}});
-
-      expect(validator).not.toBeCalled();
-      expect(form.canSubmit()).toBe(false);
-    });
-
     it('should be submittable when a required field is valid', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
       const name = chance.string();
@@ -185,6 +173,7 @@ describe('Form tests', () => {
 
       form.setState({fields: {[name]: {name, value, validator}}});
       form.setField({name, value});
+      form.setHasBeenTouched(name);
 
       expect(form.canSubmit()).toBe(true);
       expect(validator).toBeCalled();
