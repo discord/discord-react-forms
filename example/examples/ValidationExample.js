@@ -15,7 +15,7 @@ const ValidationExample = () => (
   </Form>
 );
 
-function validator(name, {value}) {
+function validator(name, {value}, _fields) {
   if (!value.length) {
     return 'Yo, fill this out';
   }
