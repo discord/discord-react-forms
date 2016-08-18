@@ -108,7 +108,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value}}});
       form.setHasBeenTouched(name);
 
-      const expected = {value, hasBeenTouched: true, error: null};
+      const expected = {value, hasBeenTouched: true, error: null, displayError: true};
       expect(form.state.fields[name]).toEqual(expected);
     });
 
@@ -120,7 +120,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {value}}});
       form.setHasBeenTouched(name, false);
 
-      const expected = {value, hasBeenTouched: false, error: null};
+      const expected = {value, hasBeenTouched: false, error: null, displayError: false};
       expect(form.state.fields[name]).toEqual(expected);
     });
 
@@ -141,7 +141,7 @@ describe('Form tests', () => {
       form.setState({fields: {[name]: {}}});
       form.setHasBeenTouched(name);
 
-      expect(onFieldUpdate).toBeCalledWith(name, {hasBeenTouched: true, error: null});
+      expect(onFieldUpdate).toBeCalledWith(name, {hasBeenTouched: true, error: null, displayError: true});
     });
   });
 
