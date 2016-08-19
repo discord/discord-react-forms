@@ -1,9 +1,5 @@
 const gitbook = require('gitbook');
-const {DOCS_PORT, DOCS_LR_PORT, DOCS_FOLDER, DOCS_OUTPUT_FOLDER, DOCS_CONFIG_FILE} = require('./helpers/Constants');
-
-const options = {
-  'config': 'documentation/book.json'
-};
+const {DOCS_PORT, DOCS_LR_PORT, DOCS_FOLDER, DOCS_OUTPUT_FOLDER} = require('./helpers/Constants');
 
 gitbook.commands[1].exec(
   [DOCS_FOLDER, DOCS_OUTPUT_FOLDER],

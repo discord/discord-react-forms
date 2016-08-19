@@ -1,10 +1,16 @@
-# react-forms
+# discord-react-forms
 
 This library makes writing forms in React easy.
 By using context passing, your Form element can manage all
 the internal elements to adapt and many complex functionalities.
 
 [Check out our docs](https://hammerandchisel.github.io/discord-react-forms/)
+
+## Installing
+
+This library is available on [npm](https://www.npmjs.com/package/discord-react-forms)
+
+`npm i --save discord-react-forms`
 
 ## Developing
 

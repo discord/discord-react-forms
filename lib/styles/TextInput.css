@@ -1,4 +1,7 @@
 .text-input {
+}
+
+.text-input-input {
   background: hsla(0, 0%, 100%, 0.06);
   color: hsla(0, 0%, 100%, 0.7);
   border: 2px solid hsla(0, 0%, 100%, 0.2);
@@ -7,6 +10,6 @@
   border-radius: 4px;
 }
 
-.text-input::placeholder {
+.text-input-input::placeholder {
   color: hsla(0, 0%, 100%, 0.4);
 }

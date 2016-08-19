@@ -21,7 +21,7 @@ describe('TextInput tests', () => {
       const textInput = mount(<TextInput name={name} />, mountOptions);
 
       expect(stubbedContext.initField).toBeCalledWith({name, value: '', hasDefaultValue: false});
-      expect(textInput.find('.forms-text-input').props().value).toBe(value);
+      expect(textInput.find('.forms-text-input-input').props().value).toBe(value);
       expect(stubbedContext.getField).toBeCalled();
     });
 
@@ -44,14 +44,14 @@ describe('TextInput tests', () => {
 
       const textInput = mount(<TextInput name={name} placeholder={placeholder} />, mountOptions);
 
-      const foundInput = textInput.find('.forms-text-input');
+      const foundInput = textInput.find('.forms-text-input-input');
       expect(foundInput.props().placeholder).toBe(placeholder);
     });
 
     it('should not contain a placeholder if the prop is not given', () => {
       const textInput = mount(<TextInput name={name} />, mountOptions);
 
-      const foundInput = textInput.find('.forms-text-input');
+      const foundInput = textInput.find('.forms-text-input-input');
       expect(foundInput.props().placeholder).toBe('');
     });
   });
