@@ -1,6 +1,6 @@
 {
   "name": "discord-react-forms",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hammerandchisel/react-forms.git"
+    "url": "git+https://github.com/hammerandchisel/discord-react-forms.git"
   },
   "author": "Discord, Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hammerandchisel/react-forms/issues"
+    "url": "https://github.com/hammerandchisel/discord-react-forms/issues"
   },
-  "homepage": "https://hammerandchisel.github.io/react-forms/",
+  "homepage": "https://hammerandchisel.github.io/discord-react-forms/",
   "jest": {
     "testDirectoryName": "test",
     "testPathIgnorePatterns": [
