@@ -80,6 +80,19 @@ describe('Form tests', () => {
     });
   });
 
+  describe('Remove field tests', () => {
+    it('should remove a field', () => {
+      const form = TestUtils.renderIntoDocument(<Form submit={noop} />);
+      const name = chance.string();
+      const value = chance.string();
+
+      form.setState({fields: {[name]: {value}}});
+      form.removeField(name);
+
+      expect(form.getField(name)).toBeUndefined();
+    });
+  });
+
   describe('Get field tests', () => {
     it('should get a field that exists', () => {
       const form = TestUtils.renderIntoDocument(<Form submit={noop} />);

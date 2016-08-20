@@ -88,7 +88,6 @@ describe('FieldMixin tests', () => {
     });
 
     it('should accept parameters to override the defaults', () => {
-      const propName = chance.string();
       const name = chance.string();
       const value = chance.string();
 
@@ -96,6 +95,27 @@ describe('FieldMixin tests', () => {
       mixin.setField({name, value});
 
       expect(stubbedContext.setField).toBeCalledWith({name, value});
+    });
+  });
+
+  describe('Remove field tests', () => {
+    it('should ask its context to remove the field with its name prop', () => {
+      const name = chance.string();
+
+      mixin.props = {name};
+      mixin.removeField();
+
+      expect(stubbedContext.removeField).toBeCalledWith(name);
+    });
+
+    it('should accept parameters to override the defaults', () => {
+      const name = chance.string();
+      const name2 = chance.string();
+
+      mixin.props = {name};
+      mixin.removeField(name2);
+
+      expect(stubbedContext.removeField).toBeCalledWith(name2);
     });
   });
 

@@ -21,6 +21,8 @@ but you do not want to show an error when the user loads the form.
 `setField({name=this.props.name, ...rest}={})`: tells the form to set the field data.
 By default, it will include the name. Anything else must be passed in the object.
 
+`removeField({name=this.props.name})`: tells the form to remove a field. By default, it will use the name prop.
+
 `isSubmitting()`: Asks the form if it is currently being submitted.
 
 `canSubmit()`: Asks the form whether or not it can be submitted.
