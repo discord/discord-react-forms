@@ -15,6 +15,6 @@ return new WebpackDevServer(webpack(webpackConfig.getWatchConfig()), {
   stats: {
     colors: true
   }
-}).listen(EXAMPLES_PORT, err => {
+}).listen(EXAMPLES_PORT, () => {
   console.log('Running webpack server');
 });
