@@ -1,16 +1,10 @@
-:root {
-  $color-background: #36393E;
-  $color-text: white;
-  $font: Roboto, sans-serif
-}
-
-:global(body) {
-  background: $color-background;
+body {
+  background: #36393E;
   position: relative;
   margin: 0;
   padding: 0;
-  color: $color-text;
-  font-family: $font;
+  color: white;
+  font-family: Roboto, sans-serif;
 }
 
 .example {
@@ -39,13 +33,13 @@
   justify-content: center;
 }
 
-.form {
+.forms-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
 }
-.form > * {
+.forms-form > * {
   margin: 16px 0 0;
 }

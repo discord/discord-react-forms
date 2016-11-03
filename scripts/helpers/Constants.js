@@ -1,6 +1,10 @@
+const path = require('path');
+
 module.exports = {
   LIB_FOLDER: './lib',
   LIB_OUTPUT_FILE: 'index.js',
+  LIB_OUTPUT_FOLDER: 'dist',
+  LIB_STYLE_FOLDER: 'styles',
   EXAMPLES_PORT: 8000,
   EXAMPLES_FOLDER: './example',
   EXAMPLES_OUTPUT_FOLDER: '.example-output',

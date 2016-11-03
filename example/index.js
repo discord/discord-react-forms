@@ -8,10 +8,10 @@ import HiddenExample from './examples/HiddenExample';
 import SingleSelectExample from './examples/SingleSelectExample';
 import TextAreaExample from './examples/TextAreaExample';
 import BigFormExample from './examples/BigFormExample';
-import styles from './style.css';
+import './style.css';
 
 const Example = ({title, children}) => (
-  <div className={styles.example}>
+  <div className="example">
     <h2>{title}</h2>
     {children}
   </div>

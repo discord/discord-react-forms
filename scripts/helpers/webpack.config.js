@@ -15,28 +15,10 @@ const baseOptions = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loaders: [
-          'style',
-          'css?camelCase&modules&sourceMap&importLoaders=1&localIdentName=forms-[local]',
-          'postcss'
-        ]
+        loaders: ['style', 'css']
       }
     ]
   },
-  postcss: [
-    require('postcss-import')(),
-    require('postcss-simple-vars')({ silent: true }),
-    require('postcss-url')({
-      url: 'inline'
-    }),
-    require('postcss-short-size')(),
-    require('postcss-pxtorem')(),
-    require('postcss-color-function')(),
-    require('postcss-reporter'),
-    require('postcss-browser-reporter'),
-    require('postcss-inline-comment'),
-    require('autoprefixer')({browsers: ['last 2 versions']})
-  ]
 };
 
 function getWatchConfig() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Form, TextInput, SubmitButton} from '../../lib';
-import styles from '../style.css';
+import '../style.css';
 
 const textInputs = [];
 for (let i = 0; i < 100; i++) {
@@ -9,7 +9,7 @@ for (let i = 0; i < 100; i++) {
 
 const BigFormExample = () => (
   <Form submit={submit}>
-    <div className={styles.scroller}>
+    <div className="scroller">
       {textInputs}
     </div>
 
