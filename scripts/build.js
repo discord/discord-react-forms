@@ -7,8 +7,7 @@ function build() {
   console.log(chalk.green('Running babel'));
   exec(`babel ${LIB_FOLDER} --out-dir ${LIB_OUTPUT_FOLDER}`, () => {
     console.log(chalk.green('Copying styles'));
-    console.log(`cp -r ${path.join(LIB_FOLDER, LIB_STYLE_FOLDER)} ${path.join(LIB_OUTPUT_FOLDER, LIB_STYLE_FOLDER)}`);
-    exec(`cp -r ${path.join(LIB_FOLDER, LIB_STYLE_FOLDER)} ${path.join(LIB_OUTPUT_FOLDER, LIB_STYLE_FOLDER)}`);
+    exec(`cp -r ${path.join(LIB_FOLDER, LIB_STYLE_FOLDER)} ${LIB_OUTPUT_FOLDER}`);
   });
 }
 
