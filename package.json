@@ -2,7 +2,8 @@
   "name": "discord-react-forms",
   "version": "3.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "jsnext:main": "lib/index.js",
   "scripts": {
     "build": "node scripts/build.js",
     "clean": "node scripts/clean.js",
@@ -33,7 +34,7 @@
     "react-addons-pure-render-mixin": "15.6.0",
     "react-dom": "16.0.0-rc.2",
     "react-mixin": "4.0.0",
-    "react-timer-mixin": "0.13.2"
+    "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
