@@ -1,11 +1,11 @@
 import React from 'react';
 import {Form, HiddenField, SubmitButton} from '../../lib';
 
-const HiddenExample = React.createClass({
-  submit(values, callback) {
+class HiddenExample extends React.Component {
+  submit = (values, callback) => {
     console.log(values);
     callback();
-  },
+  };
 
   render() {
     return (
@@ -17,6 +17,6 @@ const HiddenExample = React.createClass({
       </Form>
     );
   }
-});
+}
 
 export default HiddenExample;
