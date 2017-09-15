@@ -30,10 +30,6 @@
   },
   "keywords": ["forms", "form", "react", "react-component"],
   "dependencies": {
-    "react": "16.0.0-rc.2",
-    "react-addons-pure-render-mixin": "15.6.0",
-    "react-dom": "16.0.0-rc.2",
-    "react-mixin": "4.0.0",
     "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
@@ -66,6 +62,10 @@
     "nib": "^1.1.0",
     "nodegit": "^0.14.1",
     "npm": "^3.10.5",
+    "react": "16.0.0-rc.3",
+    "react-addons-pure-render-mixin": "15.6.0",
+    "react-dom": "16.0.0-rc.3",
+    "react-mixin": "4.0.0",
     "react-addons-test-utils": "^15.3.0",
     "react-hot-loader": "^1.3.0",
     "rimraf": "^2.5.4",
