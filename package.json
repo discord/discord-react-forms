@@ -1,6 +1,6 @@
 {
   "name": "discord-react-forms",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "",
   "main": "dist/index.js",
   "jsnext:main": "lib/index.js",
