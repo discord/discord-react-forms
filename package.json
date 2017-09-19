@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hammerandchisel/discord-react-forms.git"
+    "url": "git+https://github.com/discordapp/discord-react-forms.git"
   },
   "author": "Discord, Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hammerandchisel/discord-react-forms/issues"
+    "url": "https://github.com/discordapp/discord-react-forms/issues"
   },
-  "homepage": "https://hammerandchisel.github.io/discord-react-forms/",
+  "homepage": "https://discordapp.github.io/discord-react-forms/",
   "jest": {
     "testDirectoryName": "test",
     "testPathIgnorePatterns": [
