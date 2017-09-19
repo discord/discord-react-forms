@@ -7,7 +7,7 @@ When the `SubmitButton` is clicked, it tell the `Form` to submit.
 const Example = () => (
   <Form>
     <SubmitButton
-      cannotSubmitText="Submit"
+      canSubmitText="Submit"
       cannotSubmitText="Cannot Submit"
       isSubmittingText="Is Submitting" />
   </Form>
