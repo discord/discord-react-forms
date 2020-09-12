@@ -1,8 +1,8 @@
 # Examples
 
-Examples are live [here](https://discordapp.github.io/discord-react-forms/example/)
+Examples are live [here](https://discord.github.io/discord-react-forms/example/)
 
-All examples can be found in the [examples](https://github.com/discordapp/discord-react-forms/tree/master/example/examples)
+All examples can be found in the [examples](https://github.com/discord/discord-react-forms/tree/master/example/examples)
 folder.
 
 ## Running
